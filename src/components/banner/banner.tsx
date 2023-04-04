@@ -16,30 +16,40 @@ const StyedContainer = styled.div`
 
 const StyledText = styled.div`
     width: 45%;
-    height: 500px;
     position: relative;
     display: block;
+    text-align: left;
+    margin-top: 5rem;
+    margin-left: 11rem;
 `
 
 const StyledImg = styled.div`
     width: 55%;
     height: 500px;
+    z-index: 4;
+    float: right;
 `
 
 const StyedTitle = styled.div`
-    font-size: 26px;
+    font-size: 42px;
     color: green;
     font-weight: bold;
     font-family: 'Tahoma';
-    margin-bottom: '15px';
+    text-align: left;
+    width: 490px;
+    .textColor {
+        color: orange;
+    }
 `
 
-const StyledButton = styled.div`
-    font-family: 'Gilroy';
-    font-style: normal;
-    font-weight: 400;
+const StyledInfo = styled.div`
+    text-align: left;
+    padding-top: 50px 
+    font-family: 'Tahoma';
     font-size: 14px;
-    line-height: 22px;
+    line-height: 22px; 
+    color: black;
+    width: 460px; 
 `
 export default function Banner() {
     return (
@@ -47,16 +57,20 @@ export default function Banner() {
             <StyedContainer>
                 <StyledText>
                     <StyedTitle>
-                        Get your delivery done. Anytime, Anywhere!
+                        Get your delivery done.
+                        <label className="textColor"> Anytime, Anywhere!</label>
                     </StyedTitle>
-                    <StyledButton>
+                    <StyledInfo>
                         Apparently we had reached a great height in the
                         atmosphere, for the sky was a dead black, and the stars
                         had ceased to twinkle.
-                    </StyledButton>
-
+                    </StyledInfo>
                     <Button
-                        style={{ backgroundColor: 'orange', color: 'white' }}
+                        style={{
+                            backgroundColor: 'orange',
+                            color: 'white',
+                            marginTop: '1rem',
+                        }}
                         type="primary"
                     >
                         VISIT NOW
@@ -65,11 +79,10 @@ export default function Banner() {
                 <StyledImg>
                     <Image
                         style={{
-                            width: 'full',
-                            height: 'full',
-                            zIndex: -2,
+                            width: '56rem',
+                            // marginLeft: '2rem',
+                            zIndex: -8,
                             position: 'absolute',
-                            float: 'right',
                         }}
                         src={anh1}
                         alt=""
@@ -77,11 +90,11 @@ export default function Banner() {
                     <Image
                         style={{
                             fontSize: '251px',
-                            left: '882px',
-                            right: '50px',
-                            top: '22px',
-                            bottom: '625px',
-                            zIndex: 2,
+                            // left: '882px',
+                            // right: '50px',
+                            // top: '22px',
+                            // bottom: '625px',
+                            zIndex: 10,
                             position: 'absolute',
                         }}
                         src={anh2}
@@ -92,11 +105,11 @@ export default function Banner() {
                             fontSize: '100%',
                             zIndex: 2,
                             position: 'absolute',
-                            left: '22.29%',
-                            right: '35.64%',
-                            top: '6.09%',
-                            bottom: '71.08%',
-                            transform: 'rotate(-7.53deg)',
+                            // left: '22.29%',
+                            // right: '35.64%',
+                            // top: '6.09%',
+                            // bottom: '71.08%',
+                            // transform: 'rotate(-7.53deg)',
                         }}
                         src={anh3}
                         alt=""
@@ -104,12 +117,12 @@ export default function Banner() {
                     <Image
                         style={{
                             fontSize: '100%',
-                            zIndex: 2,
+                            zIndex: 8,
                             position: 'absolute',
-                            transform: 'rotate(-8.56deg)',
-                            height: '242.06px',
-                            left: '908.25px',
-                            top: '261.61px',
+                            // transform: 'rotate(-8.56deg)',
+                            // height: '242.06px',
+                            // left: '908.25px',
+                            // top: '261.61px',
                         }}
                         src={anh4}
                         alt=""
@@ -117,11 +130,11 @@ export default function Banner() {
                     <Image
                         style={{
                             fontSize: '100%',
-                            left: '816px',
-                            top: '183px',
-                            borderRadius: '0px',
+                            // left: '816px',
+                            // top: '183px',
+                            // borderRadius: '0px',
                             zIndex: 1,
-                            position: 'absolute',
+                            position: 'relative',
                         }}
                         src={anh5}
                         alt=""
@@ -129,11 +142,11 @@ export default function Banner() {
                     <Image
                         style={{
                             fontSize: '100%',
-                            height: '29px',
-                            width: '29px',
-                            left: '906px',
-                            top: '197px',
-                            zIndex: 1,
+                            // height: '29px',
+                            // width: '29px',
+                            // left: '906px',
+                            // top: '197px',
+                            zIndex: 12,
                             position: 'absolute',
                         }}
                         src={anh6}
