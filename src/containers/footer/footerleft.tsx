@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
 import Image from 'next/image'
-import androi from '../../.././public/img/footer/Group 62.png'
-import iphone from '../../.././public/img/footer/Group 63.png'
+import androi from './assets/Group 62.png'
+import iphone from './assets/Group 63.png'
 import styled from 'styled-components'
 
 const Container = styled.div`

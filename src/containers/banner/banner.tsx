@@ -2,16 +2,35 @@ import React from 'react'
 import styled from 'styled-components'
 import Image from 'next/image'
 import { Button } from 'antd'
+import { break_points } from '@/styles/resposive'
 
-import anh1 from '../../.././public/img/banner/banner1.png'
-import anh2 from '../../.././public/img/banner/Saly-1.png'
-import anh3 from '../../.././public/img/banner/Saly-2.png'
-import anh4 from '../../.././public/img/banner/Layer 1 1.png'
-import anh5 from '../../.././public/img/banner/Ellipse 1.png'
-import anh6 from '../../.././public/img/banner/Star 2.png'
+import anh1 from './assets/banner1.png'
+import anh2 from './assets/Saly-1.png'
+import anh3 from './assets/Saly-2.png'
+import anh4 from './assets/Layer 1 1.png'
+import anh5 from './assets/Ellipse 1.png'
+import anh6 from './assets//Star 2.png'
 
 const StyedContainer = styled.div`
     display: flex;
+    ${break_points.phone_only} {
+        display: none;
+    }
+    ${break_points.xl} {
+        display: none;
+    }
+    ${break_points.sm} {
+        display: none;
+    }
+    ${break_points.nd} {
+        display: none;
+    }
+    ${break_points.tablet_landscape_down} {
+        display: none;
+    }
+    ${break_points.laptop_only} {
+        display: flex;
+    }
 `
 
 const StyledText = styled.div`
@@ -51,6 +70,13 @@ const StyledInfo = styled.div`
     color: black;
     width: 390px; 
 `
+
+const SSS = styled(Button)`
+    background-color: orange;
+    color: white;
+    margin-top: '1rem';
+`
+
 export default function Banner() {
     return (
         <>
@@ -65,16 +91,9 @@ export default function Banner() {
                         atmosphere, for the sky was a dead black, and the stars
                         had ceased to twinkle.
                     </StyledInfo>
-                    <Button
-                        style={{
-                            backgroundColor: 'orange',
-                            color: 'white',
-                            marginTop: '1rem',
-                        }}
-                        type="primary"
-                    >
+                    <SSS style={{}} type="primary">
                         VISIT NOW
-                    </Button>
+                    </SSS>
                 </StyledText>
                 <StyledImg>
                     <Image

@@ -2,11 +2,11 @@ import { Card, Space } from 'antd'
 import React from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
-import card from '../../.././public/img/card/Rectangle 2029.png'
-import vector from '../../.././public/img/card/Vector.png'
-import add from '../../.././public/img/card/addres.png'
-import close from '../../.././public/img/card/close.png'
-import phone from '../../.././public/img/card/mobile app.png'
+import card from './assets//Rectangle 2029.png'
+import vector from './assets//Vector.png'
+import add from './assets/addres.png'
+import close from './assets/close.png'
+import phone from './assets/mobile app.png'
 
 const PepoStyled = styled.h1`
     font-size: 2rem;

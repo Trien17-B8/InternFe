@@ -1,8 +1,8 @@
 import React from 'react'
-import FooterLeft from '@/src/components/footer/footerleft'
+import FooterLeft from '@/src/containers/footer/footerleft'
 import styled from 'styled-components'
-import FooterCenter from '@/src/components/footer/footercenter'
-import FooterRight from '@/src/components/footer/footerright'
+import FooterCenter from '@/src/containers/footer/footercenter'
+import FooterRight from '@/src/containers/footer/footerright'
 
 const Conatainer = styled.div`
     display: flex;

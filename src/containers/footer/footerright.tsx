@@ -1,5 +1,5 @@
 import React from 'react'
-import anh from '../../.././public/img/footer/image 2.png'
+import anh from './assets/image 2.png'
 import Image from 'next/image'
 import styled from 'styled-components'
 import Link from 'next/link'

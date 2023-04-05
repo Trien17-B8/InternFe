@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import HeaderCenter from '@/src/components/header/headerCenter'
-import HeaderRight from '@/src/components/header/headerRight'
-import HeaderLeft from '@/src/components/header/headerLeft'
-import CarouselBanner from '@/src/components/header/carousel'
+import HeaderCenter from '@/src/containers/header/headerCenter'
+import HeaderRight from '@/src/containers/header/headerRight'
+import HeaderLeft from '@/src/containers/header/headerLeft'
+import CarouselBanner from '@/src/containers/header/carousel'
 
 const Header = styled.div`
     height: 50px;

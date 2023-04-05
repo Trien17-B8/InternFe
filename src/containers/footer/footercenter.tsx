@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import logo from '../../.././public/img/logoCr.png'
+import logo from './assets/logoCr.png'
 import {
     FacebookOutlined,
     GooglePlusOutlined,

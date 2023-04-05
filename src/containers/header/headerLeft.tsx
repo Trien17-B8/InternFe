@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import logo1 from '../../.././public/img/logoCr.png'
+import logo1 from './assets/logoCr.png'
 
 export default function HeaderLeft() {
     return (

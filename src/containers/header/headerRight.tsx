@@ -3,7 +3,7 @@ import { CaretDownOutlined } from '@ant-design/icons'
 import type { MenuProps } from 'antd'
 import { Button, Dropdown, message, Space } from 'antd'
 import Image from 'next/image'
-import usa from '../../.././public/img/USA.png'
+import usa from './assets/USA.png'
 import styled from 'styled-components'
 
 const handleMenuClick: MenuProps['onClick'] = (e) => {
@@ -32,38 +32,43 @@ const Container = styled.div`
     position: relative;
 `
 
+const Order = styled(Button)`
+    border-radius: 10;
+    background-color: orange !important;
+    font-weight: bold;
+    font-size: 12;
+    font-family: Gilroy;
+    color: white;
+    font-style: normal;
+    height: 36;
+
+    &.ant-btn {
+        margin-left: 4rem;
+    }
+`
+
+const Menu = styled(Button)`
+    margin-left: 30;
+    border-radius: 10;
+    height: 36;
+    border-color: yellow;
+    font-weight: 'bold';
+
+    &.ant-btn {
+        margin-left: 4rem;
+    }
+`
+
 export default function HeaderRight() {
     return (
         <Container>
             <div>
-                <Button
-                    style={{
-                        borderRadius: 10,
-                        backgroundColor: 'orange',
-                        fontWeight: 'bold',
-                        fontSize: 12,
-                        fontFamily: 'Gilroy',
-                        color: 'white',
-                        fontStyle: 'normal',
-                        marginLeft: 90,
-                        height: 36,
-                    }}
-                >
-                    Order
-                </Button>
+                <Order>Order</Order>
             </div>
             <div>
                 <Space wrap>
                     <Dropdown menu={menuProps}>
-                        <Button
-                            style={{
-                                marginLeft: 30,
-                                borderRadius: 10,
-                                height: 36,
-                                borderColor: 'yellow',
-                                fontWeight: 'bold',
-                            }}
-                        >
+                        <Menu>
                             <Space>
                                 <Image src={usa} alt="" />
                                 EN
@@ -71,15 +76,13 @@ export default function HeaderRight() {
                                     style={{ color: 'orange' }}
                                 />
                             </Space>
-                        </Button>
+                        </Menu>
                     </Dropdown>
                 </Space>
             </div>
             <div>
                 <Space wrap>
-                    <Button style={{ marginLeft: 22 }} type="link">
-                        Đăng Nhập
-                    </Button>
+                    <Button type="link">Đăng Nhập</Button>
                 </Space>
             </div>
         </Container>

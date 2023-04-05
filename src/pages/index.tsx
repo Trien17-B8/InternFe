@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import AppHeader from '../layouts/header/header'
-import SlideBar from '../components/menu/menu'
+import SlideBar from '../containers/menu/menu'
 import Footers from '../layouts/footer/footer'
 import Card from '../layouts/main/card'
 

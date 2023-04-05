@@ -5,24 +5,33 @@ import { Button, Dropdown, message, Space } from 'antd'
 import { SearchOutlined } from '@ant-design/icons'
 import { Input } from 'antd'
 import styled from 'styled-components'
+import { break_points } from '@/styles/resposive'
 
 const Container = styled.div`
-    @media only screen and (min-width: 360px) {
+    display: flex;
+    position: relative;
+    ${break_points.phone_only} {
         display: none;
     }
-    @media all screen and (min-width: 411px) {
+    ${break_points.tablet_landscape_down} {
+        display: flex;
+    }
+`
+
+const StyledButton = styled(Button)`
+    margin-left: 6rem;
+    border-radius: 0.4rem;
+    border-color: yellow;
+    font-weight: normal;
+    ${break_points.phone_only} {
+        display: none;
+    }
+    ${break_points.tablet_landscape_down} {
         display: none;
     }
 
-    @media only screen and (min-width: 768px) {
+    ${break_points.tablet_landscape_only} {
         display: none;
-    }
-    @media only screen and (min-width: 1024px) {
-        display: none;
-    }
-    @media only screen and (min-width: 1280px) {
-        display: flex;
-        position: relative;
     }
 `
 
@@ -52,21 +61,14 @@ export default function HeaderCenter() {
             <div>
                 <Space wrap>
                     <Dropdown menu={menuProps}>
-                        <Button
-                            style={{
-                                marginLeft: 120,
-                                borderRadius: 10,
-                                borderColor: 'yellow',
-                                fontWeight: 'normal',
-                            }}
-                        >
+                        <StyledButton style={{}}>
                             <Space>
                                 Ha noi{' '}
                                 <CaretDownOutlined
                                     style={{ color: 'orange' }}
                                 />
                             </Space>
-                        </Button>
+                        </StyledButton>
                     </Dropdown>
                 </Space>
             </div>
@@ -74,7 +76,11 @@ export default function HeaderCenter() {
                 <Input
                     placeholder="Nhập từ khóa"
                     prefix={<SearchOutlined />}
-                    style={{ width: 500, marginLeft: 37, color: 'orange' }}
+                    style={{
+                        width: 500,
+                        marginLeft: '2.4rem',
+                        color: 'orange',
+                    }}
                 />
             </div>
         </Container>
