@@ -2,6 +2,7 @@ import React from 'react'
 import type { MenuProps } from 'antd'
 import { Menu } from 'antd'
 import Image from 'next/image'
+import { break_points } from '@/styles/resposive'
 import all from './assets/all.png'
 import chinese from './assets/chinese.png'
 import coffee from './assets/coffee.png'
@@ -40,6 +41,18 @@ const StyledColor = styled(Menu)`
     padding-left: 45px;
     .ant-menu-item-selected {
         background-color: orange;
+    }
+
+    ${break_points.phone_only} {
+        width: 100%;
+        display: inline-block;
+    }
+    ${break_points.tablet_landscape_down} {
+        display: flex;
+    }
+
+    ${break_points.tablet_landscape_only} {
+        display: flex;
     }
 `
 

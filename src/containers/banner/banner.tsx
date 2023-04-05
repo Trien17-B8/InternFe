@@ -45,7 +45,7 @@ const StyledText = styled.div`
 const StyledImg = styled.div`
     width: 55%;
     height: 500px;
-    z-index: 4;
+    z-index: -4;
     float: right;
 `
 
@@ -71,7 +71,7 @@ const StyledInfo = styled.div`
     width: 390px; 
 `
 
-const SSS = styled(Button)`
+const Visited = styled(Button)`
     background-color: orange;
     color: white;
     margin-top: '1rem';
@@ -91,9 +91,7 @@ export default function Banner() {
                         atmosphere, for the sky was a dead black, and the stars
                         had ceased to twinkle.
                     </StyledInfo>
-                    <SSS style={{}} type="primary">
-                        VISIT NOW
-                    </SSS>
+                    <Visited type="primary">VISIT NOW</Visited>
                 </StyledText>
                 <StyledImg>
                     <Image

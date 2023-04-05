@@ -18,6 +18,19 @@ const AboutDiv = styled.div`
     align-items: center;
 `
 
+const StyledH2 = styled.h2`
+    width: 260px;
+    font-size: 0.8rem;
+    font-weight: 350px;
+`
+
+const StyledH2T = styled.h2`
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 1.3rem;
+    color: #1dac0e;
+`
+
 const CardComponents: React.FC = () => (
     <Space direction="vertical" size={16}>
         <Card bordered={false} size="small" style={{ width: 300 }}>
@@ -25,28 +38,13 @@ const CardComponents: React.FC = () => (
             <PepoStyled>Peppo restaurant</PepoStyled>
             <AboutDiv>
                 <Image style={{}} src={add} alt=""></Image>{' '}
-                <h2
-                    style={{
-                        width: '260px',
-                        fontSize: '0.8rem',
-                        fontWeight: '350px',
-                    }}
-                >
+                <StyledH2 style={{}}>
                     12, Pham Ngoc Thach st, Dong Da dist, Ha Noi (0.3 km)
-                </h2>
+                </StyledH2>
             </AboutDiv>
             <AboutDiv>
-                <Image style={{}} src={close} alt=""></Image>{' '}
-                <h2
-                    style={{
-                        fontSize: '1rem',
-                        fontWeight: '400',
-                        marginLeft: '1.3rem',
-                        color: '#1DAC0E',
-                    }}
-                >
-                    Đang mở cửa
-                </h2>
+                <Image src={close} alt=""></Image>{' '}
+                <StyledH2T>Đang mở cửa</StyledH2T>
             </AboutDiv>
             <AboutDiv>
                 <Image style={{}} src={vector} alt=""></Image>

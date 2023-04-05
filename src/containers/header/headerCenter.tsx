@@ -34,6 +34,18 @@ const StyledButton = styled(Button)`
         display: none;
     }
 `
+const ContainerInput = styled.div`
+    ${break_points.phone_only} {
+        display: none;
+    }
+    ${break_points.tablet_landscape_down} {
+        display: none;
+    }
+
+    ${break_points.tablet_landscape_only} {
+        display: none;
+    }
+`
 
 const handleMenuClick: MenuProps['onClick'] = (e) => {
     message.info('Click on menu item.')
@@ -72,7 +84,7 @@ export default function HeaderCenter() {
                     </Dropdown>
                 </Space>
             </div>
-            <div>
+            <ContainerInput>
                 <Input
                     placeholder="Nhập từ khóa"
                     prefix={<SearchOutlined />}
@@ -82,7 +94,7 @@ export default function HeaderCenter() {
                         color: 'orange',
                     }}
                 />
-            </div>
+            </ContainerInput>
         </Container>
     )
 }
