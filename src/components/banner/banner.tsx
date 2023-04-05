@@ -47,9 +47,9 @@ const StyledInfo = styled.div`
     padding-top: 50px 
     font-family: 'Tahoma';
     font-size: 14px;
-    line-height: 22px; 
+    font-weight: 400;
     color: black;
-    width: 460px; 
+    width: 390px; 
 `
 export default function Banner() {
     return (
@@ -80,8 +80,7 @@ export default function Banner() {
                     <Image
                         style={{
                             width: '56rem',
-                            // marginLeft: '2rem',
-                            zIndex: -8,
+                            zIndex: -4,
                             position: 'absolute',
                         }}
                         src={anh1}
@@ -90,11 +89,8 @@ export default function Banner() {
                     <Image
                         style={{
                             fontSize: '251px',
-                            // left: '882px',
-                            // right: '50px',
-                            // top: '22px',
-                            // bottom: '625px',
                             zIndex: 10,
+                            marginLeft: '8rem',
                             position: 'absolute',
                         }}
                         src={anh2}
@@ -103,13 +99,10 @@ export default function Banner() {
                     <Image
                         style={{
                             fontSize: '100%',
-                            zIndex: 2,
+                            zIndex: 4,
                             position: 'absolute',
-                            // left: '22.29%',
-                            // right: '35.64%',
-                            // top: '6.09%',
-                            // bottom: '71.08%',
-                            // transform: 'rotate(-7.53deg)',
+                            marginLeft: '-340px',
+                            transform: 'rotate(-7.53deg)',
                         }}
                         src={anh3}
                         alt=""
@@ -117,12 +110,11 @@ export default function Banner() {
                     <Image
                         style={{
                             fontSize: '100%',
-                            zIndex: 8,
+                            zIndex: 3,
                             position: 'absolute',
-                            // transform: 'rotate(-8.56deg)',
-                            // height: '242.06px',
-                            // left: '908.25px',
-                            // top: '261.61px',
+                            transform: 'rotate(-8.56deg)',
+                            marginTop: '80px',
+                            marginLeft: '190px',
                         }}
                         src={anh4}
                         alt=""
@@ -130,11 +122,11 @@ export default function Banner() {
                     <Image
                         style={{
                             fontSize: '100%',
-                            // left: '816px',
-                            // top: '183px',
-                            // borderRadius: '0px',
+                            position: 'absolute',
+                            marginLeft: '125px',
+                            marginTop: '115px',
+
                             zIndex: 1,
-                            position: 'relative',
                         }}
                         src={anh5}
                         alt=""
@@ -142,12 +134,10 @@ export default function Banner() {
                     <Image
                         style={{
                             fontSize: '100%',
-                            // height: '29px',
-                            // width: '29px',
-                            // left: '906px',
-                            // top: '197px',
+                            marginTop: '165px',
+                            marginLeft: '165px',
                             zIndex: 12,
-                            position: 'absolute',
+                            position: 'relative',
                         }}
                         src={anh6}
                         alt=""

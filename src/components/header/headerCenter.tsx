@@ -7,8 +7,23 @@ import { Input } from 'antd'
 import styled from 'styled-components'
 
 const Container = styled.div`
-    display: flex;
-    position: relative;
+    @media only screen and (min-width: 360px) {
+        display: none;
+    }
+    @media all screen and (min-width: 411px) {
+        display: none;
+    }
+
+    @media only screen and (min-width: 768px) {
+        display: none;
+    }
+    @media only screen and (min-width: 1024px) {
+        display: none;
+    }
+    @media only screen and (min-width: 1280px) {
+        display: flex;
+        position: relative;
+    }
 `
 
 const handleMenuClick: MenuProps['onClick'] = (e) => {
@@ -18,7 +33,7 @@ const handleMenuClick: MenuProps['onClick'] = (e) => {
 
 const items: MenuProps['items'] = [
     {
-        label: 'Ha Noi',
+        label: 'Ha noi',
         key: '1',
     },
     {
@@ -42,10 +57,11 @@ export default function HeaderCenter() {
                                 marginLeft: 120,
                                 borderRadius: 10,
                                 borderColor: 'yellow',
+                                fontWeight: 'normal',
                             }}
                         >
                             <Space>
-                                Ha Noi{' '}
+                                Ha noi{' '}
                                 <CaretDownOutlined
                                     style={{ color: 'orange' }}
                                 />
@@ -60,23 +76,6 @@ export default function HeaderCenter() {
                     prefix={<SearchOutlined />}
                     style={{ width: 500, marginLeft: 37, color: 'orange' }}
                 />
-            </div>
-            <div>
-                <Button
-                    style={{
-                        borderRadius: 10,
-                        backgroundColor: 'orange',
-                        fontWeight: 'bold',
-                        fontSize: 12,
-                        fontFamily: 'Gilroy',
-                        color: 'white',
-                        fontStyle: 'normal',
-                        marginLeft: 90,
-                        height: 36,
-                    }}
-                >
-                    Order
-                </Button>
             </div>
         </Container>
     )

@@ -21,12 +21,12 @@ const Left = styled.div`
 
 const Center = styled.div`
     position: relative;
-    width: 60%;
+    width: 55%;
 `
 
 const Right = styled.div`
     position: relative;
-    width: 25%;
+    width: 30%;
 `
 
 export default function AppHeader() {

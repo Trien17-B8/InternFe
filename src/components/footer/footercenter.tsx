@@ -15,6 +15,9 @@ const Container = styled.div`
 const Icon = styled.div`
     padding-left: 0.5rem;
 `
+const StyledP = styled.p`
+    font-size: 10pt;
+`
 
 export default function FooterCenter() {
     return (
@@ -22,7 +25,7 @@ export default function FooterCenter() {
             <div>
                 <Image src={logo} alt=""></Image>
             </div>
-            <p>@ Capichi 2021 - A Food Delivery Corporation</p>
+            <StyledP>@ Capichi 2021 - A Food Delivery Corporation</StyledP>
             <Icon>
                 <InstagramOutlined style={{ fontSize: '2rem' }} />
                 <FacebookOutlined

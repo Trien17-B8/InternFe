@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Row } from 'antd'
+import { Col, Divider, Row } from 'antd'
 import CardComponents from '@/src/components/card/cardComponents'
 
 const style: React.CSSProperties = {}

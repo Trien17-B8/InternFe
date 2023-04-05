@@ -17,46 +17,55 @@ const AppIcon = styled.div`
     margin-left: 3rem;
 `
 
+const StyledLink = styled.div`
+    padding-top: 0.6rem;
+    a {
+        text-decoration: none;
+        color: #2e92ff;
+        font-size: 13pt;
+    }
+`
+
 function FooterLeft() {
     return (
         <Container>
             <ContainerFluit>
-                <h4>Giới Thiệu</h4>
-                <div>
+                <h3>Giới Thiệu</h3>
+                <StyledLink>
                     <Link href={''}>Giới thiệu & liên hệ</Link>
-                </div>
+                </StyledLink>
 
-                <div>
+                <StyledLink>
                     <Link href={''}>Trung tâm trợ giúp</Link>
-                </div>
+                </StyledLink>
 
-                <div>
+                <StyledLink>
                     <Link href={''}>Quy chế</Link>
-                </div>
+                </StyledLink>
 
-                <div>
+                <StyledLink>
                     <Link href={''}>Điều khoản sử dụng</Link>
-                </div>
+                </StyledLink>
 
-                <div>
+                <StyledLink>
                     <Link href={''}>Bảo mật thông tin</Link>
-                </div>
+                </StyledLink>
 
-                <div>
+                <StyledLink>
                     <Link href={''}>Giải quyết khiếu nại</Link>
-                </div>
+                </StyledLink>
 
-                <div>
+                <StyledLink>
                     <Link href={''}>Hợp tác nhân viên giao nhận</Link>
-                </div>
+                </StyledLink>
 
-                <div>
+                <StyledLink>
                     <Link href={''}>Đăng ký quán</Link>
-                </div>
+                </StyledLink>
 
-                <div>
+                <StyledLink>
                     <Link href={''}>Ứng dụng Capichi</Link>
-                </div>
+                </StyledLink>
             </ContainerFluit>
             <AppIcon>
                 <h4>App Capichi</h4>

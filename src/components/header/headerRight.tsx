@@ -13,11 +13,11 @@ const handleMenuClick: MenuProps['onClick'] = (e) => {
 
 const items: MenuProps['items'] = [
     {
-        label: 'Ha Noi',
+        label: 'EN',
         key: '1',
     },
     {
-        label: 'Ho Chi Minh',
+        label: 'VN',
         key: '2',
     },
 ]
@@ -36,19 +36,37 @@ export default function HeaderRight() {
     return (
         <Container>
             <div>
+                <Button
+                    style={{
+                        borderRadius: 10,
+                        backgroundColor: 'orange',
+                        fontWeight: 'bold',
+                        fontSize: 12,
+                        fontFamily: 'Gilroy',
+                        color: 'white',
+                        fontStyle: 'normal',
+                        marginLeft: 90,
+                        height: 36,
+                    }}
+                >
+                    Order
+                </Button>
+            </div>
+            <div>
                 <Space wrap>
                     <Dropdown menu={menuProps}>
                         <Button
                             style={{
-                                marginLeft: 120,
+                                marginLeft: 30,
                                 borderRadius: 10,
                                 height: 36,
                                 borderColor: 'yellow',
+                                fontWeight: 'bold',
                             }}
                         >
                             <Space>
                                 <Image src={usa} alt="" />
-                                Ha Noi
+                                EN
                                 <CaretDownOutlined
                                     style={{ color: 'orange' }}
                                 />
@@ -59,7 +77,7 @@ export default function HeaderRight() {
             </div>
             <div>
                 <Space wrap>
-                    <Button style={{ marginLeft: 32 }} type="link">
+                    <Button style={{ marginLeft: 22 }} type="link">
                         Đăng Nhập
                     </Button>
                 </Space>
