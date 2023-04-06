@@ -1,67 +1,20 @@
 import React from 'react'
 import { Col, Row } from 'antd'
 import CardComponents from '@/src/containers/card/cardComponents'
+import styled from 'styled-components'
 
-const style: React.CSSProperties = {}
+const CardDiv = styled.div`
+    margin-right: 2rem;
+`
 
 const Card: React.FC = () => (
     <>
         <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col className="gutter-row">
-                <div style={style}>
+            <CardDiv>
+                <Col className="gutter-row">
                     <CardComponents />
-                </div>
-            </Col>
-            <Col className="gutter-row">
-                <div style={style}>
-                    {' '}
-                    <CardComponents />
-                </div>
-            </Col>
-            <Col className="gutter-row">
-                <div style={style}>
-                    {' '}
-                    <CardComponents />
-                </div>
-            </Col>
-        </Row>
-        <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col className="gutter-row">
-                <div style={style}>
-                    <CardComponents />
-                </div>
-            </Col>
-            <Col className="gutter-row">
-                <div style={style}>
-                    {' '}
-                    <CardComponents />
-                </div>
-            </Col>
-            <Col className="gutter-row">
-                <div style={style}>
-                    {' '}
-                    <CardComponents />
-                </div>
-            </Col>
-        </Row>
-        <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col className="gutter-row">
-                <div style={style}>
-                    <CardComponents />
-                </div>
-            </Col>
-            <Col className="gutter-row">
-                <div style={style}>
-                    {' '}
-                    <CardComponents />
-                </div>
-            </Col>
-            <Col className="gutter-row">
-                <div style={style}>
-                    {' '}
-                    <CardComponents />
-                </div>
-            </Col>
+                </Col>
+            </CardDiv>
         </Row>
     </>
 )

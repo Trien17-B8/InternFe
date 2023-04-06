@@ -44,8 +44,7 @@ const StyledColor = styled(Menu)`
     }
 
     ${break_points.phone_only} {
-        width: 100%;
-        display: inline-block;
+        display: none;
     }
     ${break_points.tablet_landscape_down} {
         display: flex;

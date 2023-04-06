@@ -17,6 +17,9 @@ const StyledP = styled.p`
         text-decoration: none;
         color: '#17059e';
     }
+    .phone {
+        color: red;
+    }
 `
 
 export default function FooterRight() {
@@ -42,7 +45,7 @@ export default function FooterRight() {
             <div>
                 <StyledP>
                     Số điện thoại:
-                    <span style={{ color: 'red' }}>1900 1522</span>
+                    <span className="phone">1900 1522</span>
                 </StyledP>
             </div>
             <div>

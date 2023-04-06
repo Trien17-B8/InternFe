@@ -1,12 +1,12 @@
-import { Card, Space } from 'antd'
+import { Button, Card, Space } from 'antd'
 import React from 'react'
 import Image from 'next/image'
 import styled from 'styled-components'
-import card from './assets//Rectangle 2029.png'
 import vector from './assets//Vector.png'
 import add from './assets/addres.png'
 import close from './assets/close.png'
 import phone from './assets/mobile app.png'
+import { Data } from './data'
 
 const PepoStyled = styled.h1`
     font-size: 2rem;
@@ -31,79 +31,90 @@ const StyledH2T = styled.h2`
     color: #1dac0e;
 `
 
-const CardComponents: React.FC = () => (
-    <Space direction="vertical" size={16}>
-        <Card bordered={false} size="small" style={{ width: 300 }}>
-            <Image style={{}} src={card} alt=""></Image>
-            <PepoStyled>Peppo restaurant</PepoStyled>
-            <AboutDiv>
-                <Image style={{}} src={add} alt=""></Image>{' '}
-                <StyledH2 style={{}}>
-                    12, Pham Ngoc Thach st, Dong Da dist, Ha Noi (0.3 km)
-                </StyledH2>
-            </AboutDiv>
-            <AboutDiv>
-                <Image src={close} alt=""></Image>{' '}
-                <StyledH2T>Đang mở cửa</StyledH2T>
-            </AboutDiv>
-            <AboutDiv>
-                <Image style={{}} src={vector} alt=""></Image>
-                <div>
-                    <button
-                        style={{
-                            fontSize: '1rem',
-                            background: '#d5e9ff',
-                            border: 'none',
-                            padding: '5px',
-                            marginLeft: '1rem',
-                            borderRadius: '20px',
-                        }}
-                    >
-                        08:30 - 10:30
-                    </button>
-                    <button
-                        style={{
-                            fontSize: '1rem',
-                            background: '#d2eecf',
-                            border: 'none',
-                            padding: '5px',
-                            marginLeft: '2rem',
-                            borderRadius: '20px',
-                        }}
-                    >
-                        08:30 - 10:30
-                    </button>
-                </div>
-            </AboutDiv>
-            <div
-                style={{
-                    display: 'flex',
-                    marginTop: '1rem',
-                }}
-            >
-                <button
-                    style={{
-                        height: '35px',
-                        width: '60px',
-                        background: '#FF881D',
-                        border: 'none',
-                        borderRadius: '10px',
-                        color: 'white',
-                        // fontSize: '1rem',
-                        boxShadow:
-                            '0px 2px 4px rgba(40, 41, 61, 0.04), 0px 8px 16px rgba(96, 97, 112, 0.16)',
-                    }}
-                >
-                    Delivery
-                </button>
-                <Image
-                    style={{ marginBottom: '1rem', marginLeft: '9rem' }}
-                    src={phone}
-                    alt=""
-                ></Image>
-            </div>
-        </Card>
-    </Space>
-)
+const FakeImg = styled.div`
+    height: 150px;
+    width: 300px;
+`
 
-export default CardComponents
+const StyledButton = styled(Button)`
+    font-size: 1rem;
+    background-color: #d5e9ff;
+    border: none;
+    padding: 5px;
+    margin-left: 1rem;
+    border-radius: 20px;
+`
+
+const StyledBtn = styled(Button)`
+    font-size: 1rem;
+    background-color: #d2eecf;
+    border: none;
+    padding: 5px;
+    margin-left: 2rem;
+    border-radius: 20px;
+`
+
+const Booking = styled.div`
+    display: flex;
+    margin-top: 1rem;
+`
+
+const Delivery = styled(Button)`
+    height: 35px;
+    width: 80px;
+    background-color: #ff881d;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    // fontSize: '1rem';
+    box-shadow: 0px 2px 4px rgba(40, 41, 61, 0.04),
+        0px 8px 16px rgba(96, 97, 112, 0.16);
+`
+
+const StyledBooking = styled(Image)`
+    margin-bottom: 1rem;
+    margin-left: 9rem;
+`
+
+export default function CardComponents() {
+    return (
+        <div>
+            {Data.map((data) => {
+                return (
+                    <Space direction="vertical" size={16}>
+                        <Card
+                            bordered={false}
+                            size="small"
+                            style={{ width: 300, marginLeft: '2rem' }}
+                        >
+                            {/* <Image style={{}} src="" alt=""></Image> */}
+                            <FakeImg
+                                style={{ backgroundColor: `${data.image}` }}
+                            ></FakeImg>
+                            <PepoStyled>Peppo restaurant</PepoStyled>
+                            <AboutDiv>
+                                <Image src={add} alt=""></Image>{' '}
+                                <StyledH2>{data.address}</StyledH2>
+                            </AboutDiv>
+                            <AboutDiv>
+                                <Image src={close} alt=""></Image>{' '}
+                                <StyledH2T>{data.status}</StyledH2T>
+                            </AboutDiv>
+                            <AboutDiv>
+                                <Image src={vector} alt=""></Image>
+                                <div>
+                                    <StyledButton>{data.open}</StyledButton>
+                                    <StyledBtn>{data.open}</StyledBtn>
+                                </div>
+                            </AboutDiv>
+                            <Booking>
+                                <Delivery>Delivery</Delivery>
+                                <StyledBooking src={phone} alt="" />
+                            </Booking>
+                        </Card>
+                    </Space>
+                )
+            })}
+        </div>
+    )
+}

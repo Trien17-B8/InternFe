@@ -10,11 +10,20 @@ import { break_points } from '@/styles/resposive'
 const Container = styled.div`
     display: flex;
     position: relative;
-    ${break_points.phone_only} {
-        display: none;
-    }
-    ${break_points.tablet_landscape_down} {
+    ${break_points.xs} {
+        width: 100%;
         display: flex;
+        text-align: center;
+    }
+    ${break_points.sm} {
+    }
+    ${break_points.nd} {
+    }
+    ${break_points.Ig} {
+    }
+    ${break_points.xl} {
+    }
+    ${break_points.xxl} {
     }
 `
 
@@ -23,27 +32,33 @@ const StyledButton = styled(Button)`
     border-radius: 0.4rem;
     border-color: yellow;
     font-weight: normal;
-    ${break_points.phone_only} {
-        display: none;
-    }
-    ${break_points.tablet_landscape_down} {
-        display: none;
-    }
-
-    ${break_points.tablet_landscape_only} {
-        display: none;
+    ${break_points.xs} {
+        display: flex;
+        text-align: center;
     }
 `
 const ContainerInput = styled.div`
-    ${break_points.phone_only} {
+    ${break_points.xs} {
         display: none;
     }
-    ${break_points.tablet_landscape_down} {
+    ${break_points.sm} {
         display: none;
     }
-
-    ${break_points.tablet_landscape_only} {
-        display: none;
+    ${break_points.nd} {
+        display: flex;
+        width: 13rem;
+    }
+    ${break_points.Ig} {
+        display: flex;
+        width: 16rem;
+    }
+    ${break_points.xl} {
+        display: flex;
+        width: 70%;
+    }
+    ${break_points.xxl} {
+        display: flex;
+        width: 100%;
     }
 `
 
@@ -63,6 +78,12 @@ const items: MenuProps['items'] = [
     },
 ]
 
+const Styled = styled(Input)`
+    width: 500px;
+    margin-left: 2.4rem;
+    color: orange;
+`
+
 const menuProps = {
     items,
     onClick: handleMenuClick,
@@ -73,7 +94,7 @@ export default function HeaderCenter() {
             <div>
                 <Space wrap>
                     <Dropdown menu={menuProps}>
-                        <StyledButton style={{}}>
+                        <StyledButton>
                             <Space>
                                 Ha noi{' '}
                                 <CaretDownOutlined
@@ -85,14 +106,9 @@ export default function HeaderCenter() {
                 </Space>
             </div>
             <ContainerInput>
-                <Input
+                <Styled
                     placeholder="Nhập từ khóa"
                     prefix={<SearchOutlined />}
-                    style={{
-                        width: 500,
-                        marginLeft: '2.4rem',
-                        color: 'orange',
-                    }}
                 />
             </ContainerInput>
         </Container>
