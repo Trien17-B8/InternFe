@@ -31,11 +31,6 @@ const StyledH2T = styled.h2`
     color: #1dac0e;
 `
 
-const FakeImg = styled.div`
-    height: 150px;
-    width: 300px;
-`
-
 const StyledButton = styled(Button)`
     font-size: 1rem;
     background-color: #d5e9ff;
@@ -79,18 +74,15 @@ const StyledBooking = styled(Image)`
 export default function CardComponents() {
     return (
         <div>
-            {Data.map((data) => {
+            {Data.map((data, index) => {
                 return (
-                    <Space direction="vertical" size={16}>
+                    <Space key={index} direction="vertical" size={16}>
                         <Card
                             bordered={false}
                             size="small"
                             style={{ width: 300, marginLeft: '2rem' }}
                         >
-                            {/* <Image style={{}} src="" alt=""></Image> */}
-                            <FakeImg
-                                style={{ backgroundColor: `${data.image}` }}
-                            ></FakeImg>
+                            <Image priority src={data.image} alt=""></Image>
                             <PepoStyled>Peppo restaurant</PepoStyled>
                             <AboutDiv>
                                 <Image src={add} alt=""></Image>{' '}

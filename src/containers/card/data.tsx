@@ -1,6 +1,8 @@
+import anh1 from './assets/Rectangle 2029.png'
+
 export type Product = {
     id: number
-    image: string
+    image: any
     title: string
     address: string
     status: string
@@ -10,7 +12,7 @@ export type Product = {
 export const Data: Product[] = [
     {
         id: 1,
-        image: 'red',
+        image: anh1,
         title: 'Peppo restaurant',
         address: '12, Pham Ngoc Thach st, Dong Da dist, Ha Noi (0.3 km)',
         status: 'Đang mở cửa',
@@ -18,7 +20,7 @@ export const Data: Product[] = [
     },
     {
         id: 2,
-        image: 'blue',
+        image: anh1,
         title: 'Hanpo restaurant',
         address: '12, Pham Ngoc Thach st, Dong Da dist, Ha Noi (0.3 km)',
         status: 'Đang mở cửa',
@@ -26,7 +28,7 @@ export const Data: Product[] = [
     },
     {
         id: 3,
-        image: 'back',
+        image: anh1,
         title: 'Hanpo restaurant',
         address: '12, Pham Ngoc Thach st, Dong Da dist, Ha Noi (0.3 km)',
         status: 'Đang mở cửa',
@@ -34,7 +36,7 @@ export const Data: Product[] = [
     },
     {
         id: 4,
-        image: 'blue',
+        image: anh1,
         title: 'Hanpo restaurant',
         address: '12, Pham Ngoc Thach st, Dong Da dist, Ha Noi (0.3 km)',
         status: 'Đang mở cửa',
@@ -42,7 +44,7 @@ export const Data: Product[] = [
     },
     {
         id: 5,
-        image: 'green',
+        image: anh1,
         title: 'Hanpo restaurant',
         address: '12, Pham Ngoc Thach st, Dong Da dist, Ha Noi (0.3 km)',
         status: 'Đang mở cửa',
@@ -50,7 +52,7 @@ export const Data: Product[] = [
     },
     {
         id: 6,
-        image: 'black',
+        image: anh1,
         title: 'Hanpo restaurant',
         address: '12, Pham Ngoc Thach st, Dong Da dist, Ha Noi (0.3 km)',
         status: 'Đang mở cửa',
@@ -58,7 +60,7 @@ export const Data: Product[] = [
     },
     {
         id: 7,
-        image: 'black',
+        image: anh1,
         title: 'Hanpo restaurant',
         address: '12, Pham Ngoc Thach st, Dong Da dist, Ha Noi (0.3 km)',
         status: 'Đang mở cửa',
@@ -66,7 +68,7 @@ export const Data: Product[] = [
     },
     {
         id: 8,
-        image: 'green',
+        image: anh1,
         title: 'Hanpo restaurant',
         address: '12, Pham Ngoc Thach st, Dong Da dist, Ha Noi (0.3 km)',
         status: 'Đang mở cửa',
@@ -74,7 +76,7 @@ export const Data: Product[] = [
     },
     {
         id: 9,
-        image: 'yellow',
+        image: anh1,
         title: 'Hanpo restaurant',
         address: '12, Pham Ngoc Thach st, Dong Da dist, Ha Noi (0.3 km)',
         status: 'Đang mở cửa',
