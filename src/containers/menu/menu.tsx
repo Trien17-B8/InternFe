@@ -16,7 +16,6 @@ import pizza from './assets/pizza.png'
 import sweet from './assets/sweet.png'
 import vergetarian2 from './assets/vergetarian2.png'
 import styled from 'styled-components'
-// import voucher from '../../.././public/img/menu/voucher.png'
 type MenuItem = Required<MenuProps>['items'][number]
 
 function getItem(
@@ -44,14 +43,17 @@ const StyledColor = styled(Menu)`
     }
 
     ${break_points.phone_only} {
-        display: none;
+        display: flex;
+        justify-items: center;
     }
     ${break_points.tablet_landscape_down} {
         display: flex;
+        justify-items: center;
     }
 
     ${break_points.tablet_landscape_only} {
         display: flex;
+        justify-items: center;
     }
 `
 

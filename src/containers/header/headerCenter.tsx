@@ -35,6 +35,15 @@ const StyledButton = styled(Button)`
     ${break_points.xs} {
         display: flex;
         text-align: center;
+        margin-left: 8.5rem;
+    }
+    ${break_points.sm} {
+        display: flex;
+        margin-left: 7.5rem;
+    }
+    ${break_points.nd} {
+        display: flex;
+        margin-left: 5.5rem;
     }
 `
 const ContainerInput = styled.div`

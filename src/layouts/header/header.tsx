@@ -4,19 +4,18 @@ import HeaderCenter from '@/src/containers/header/headerCenter'
 import HeaderRight from '@/src/containers/header/headerRight'
 import HeaderLeft from '@/src/containers/header/headerLeft'
 import CarouselBanner from '@/src/containers/header/carousel'
+import { break_points } from '@/styles/resposive'
 
 const Header = styled.div`
-    height: 50px;
+    /* height: 50px; */
     display: flex;
-    margin-left: 4rem;
-    margin-right: 4rem;
-    margin-top: 2rem;
-    position: relative;
+    /* margin-top: 2rem; */
+    /* position: relative; */
 `
 
 const Left = styled.div`
     position: relative;
-    width: 15%;
+    width: 10%;
 `
 
 const Center = styled.div`
@@ -27,6 +26,10 @@ const Center = styled.div`
 const Right = styled.div`
     position: relative;
     width: 30%;
+`
+
+const Carousel = styled.div`
+    justify-content: center;
 `
 
 export default function AppHeader() {
@@ -43,9 +46,9 @@ export default function AppHeader() {
                     <HeaderRight />
                 </Right>
             </Header>
-            <div>
+            <Carousel>
                 <CarouselBanner />
-            </div>
+            </Carousel>
         </>
     )
 }

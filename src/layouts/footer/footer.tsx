@@ -12,16 +12,27 @@ const Conatainer = styled.div`
     ${break_points.phone_only} {
         width: 100%;
         text-align: center;
+        margin-left: 4rem;
+    }
+    ${break_points.sm} {
+        width: 100%;
+        text-align: center;
+        margin-left: 4rem;
+    }
+    ${break_points.Ig} {
+        width: 100%;
+        margin-left: 4rem;
+        text-align: center;
     }
     ${break_points.tablet_landscape_down} {
         width: 100%;
-
+        margin-left: 4rem;
         text-align: center;
     }
 
     ${break_points.tablet_landscape_only} {
         width: 100%;
-
+        margin-left: 4rem;
         text-align: center;
     }
 `

@@ -7,6 +7,29 @@ import add from './assets/addres.png'
 import close from './assets/close.png'
 import phone from './assets/mobile app.png'
 import { Data } from './data'
+import { break_points } from '@/styles/resposive'
+
+const Container = styled.div`
+    ${break_points.phone_only} {
+        justify-content: center;
+        margin-left: -100px;
+        width: 100%;
+    }
+
+    ${break_points.tablet_landscape_only} {
+        justify-content: center;
+        width: 110%;
+    }
+    ${break_points.tablet_landscape_up} {
+        width: 110%;
+
+        justify-content: center;
+    }
+    ${break_points.tablet_landscape_down} {
+        justify-content: center;
+        width: 140%;
+    }
+`
 
 const PepoStyled = styled.h1`
     font-size: 2rem;
@@ -73,7 +96,7 @@ const StyledBooking = styled(Image)`
 
 export default function CardComponents() {
     return (
-        <div>
+        <Container>
             {Data.map((data, index) => {
                 return (
                     <Space key={index} direction="vertical" size={16}>
@@ -107,6 +130,6 @@ export default function CardComponents() {
                     </Space>
                 )
             })}
-        </div>
+        </Container>
     )
 }

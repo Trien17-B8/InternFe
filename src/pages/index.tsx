@@ -12,8 +12,6 @@ const Footer = styled.div``
 
 const Main = styled.div`
     display: flex;
-    margin-left: 4rem;
-    margin-right: 4rem;
     ${break_points.phone_only} {
         margin-left: 0;
         margin-right: 0;
@@ -38,17 +36,25 @@ const Slider = styled.div`
     display: flex;
     width: 20%;
     ${break_points.phone_only} {
-        display: none !important;
+        display: inline-block !important;
+        width: 400px;
+        text-align: center;
+    }
+    @media only screen and (max-width: 380px) {
+        width: 1000px;
+        text-align: center;
     }
 
     @media only screen and (max-width: 910px) {
-        display: none !important;
+        width: 700px;
+        margin-right: 25px;
+        text-align: center;
     }
 
     ${break_points.tablet_portrait_only} {
         display: block;
         margin-left: 2rem;
-        width: 90%;
+        width: 900px;
         height: 20px;
         font-size: 28px;
     }
@@ -68,14 +74,23 @@ const Contents = styled.div`
     text-align: center;
     ${break_points.phone_only} {
         text-align: center;
-        margin-top: 10rem;
-        margin-left: 10rem;
+        margin-left: 6rem;
+        width: 150%;
+    }
+    ${break_points.Ig} {
+        /* margin-left: 6rem; */
+        width: 120%;
+    }
+    ${break_points.nd} {
+        /* text-align: center;
+        margin-left: 6rem;
+        width: 150%; */
     }
     ${break_points.tablet_portrait_only} {
-        margin-left: 4rem;
+        margin-left: 8rem;
         display: inline-block;
         margin-top: 5rem;
-        width: 100%;
+        width: 70%;
         font-size: 15px;
     }
     ${break_points.tablet_landscape_only} {
